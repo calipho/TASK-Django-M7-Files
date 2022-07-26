@@ -21,6 +21,8 @@ class Employee(models.Model):
         null=True,
         blank=True,
     )
+    avatar = models.ImageField(
+        upload_to="employee_avatars", null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
